@@ -1,0 +1,112 @@
+body {
+    background-color: white ;
+}
+
+.sliderwrapper {
+    height : 200px ;
+    width : 400px ; 
+    margin : 0 auto ;
+    border : 3px inset black ;
+}
+
+.slider {
+    display: flex ;
+    height : 200px ;
+    width : 100% ;
+    background-color: cyan ;
+}
+
+img {
+    width : 100% ;
+}
+
+.buttonwrapper {
+    position: absolute ;
+    width : 600px ;
+    height: 100px ;
+    margin : 0 auto ;
+}
+                   
+.buttonPrev {
+    margin-left : 750px ;
+    position : absolute ;
+    margin-top : 20px ;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600 ;
+
+    color : white ;
+    background-color: lightskyblue ;
+    padding: 20px 30px ;
+    border-radius: 5px;
+    border : 2px inset black ;
+    transition: transform .2s;
+}
+
+.buttonNext {
+    margin-left : 1048px ;
+    position : absolute ;
+    margin-top : 20px  ;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600 ;
+
+    color : white ;
+    background-color: lightskyblue ;
+    padding: 20px 30px ; /*лево право, вверх низ*/
+    border-radius: 5px;
+    border : 2px inset black ;
+    transition: transform .2s;
+}
+
+.buttonNext:hover {      /* можно ли как-то объединить эффекты для двух классов? */
+    border-radius: 5px;
+	background:  whitesmoke ;
+	color: #178dbf;
+	box-shadow: inset 0 #178dbf;
+}
+
+.buttonNext:active {
+    transform: scale(.9);
+}
+
+.buttonPrev:hover {
+    border-radius: 5px;
+	background:  whitesmoke ;
+	color: #178dbf;
+	box-shadow: inset 0 #178dbf;
+}
+
+.buttonPrev:active {
+    transform: scale(.9);
+}
+
+.miniButtonWrapper {
+    margin-left : 910px ;
+    width : 600px ;
+}
+
+.miniButton {
+
+    display: inline-block ;
+    background-color : blue ;
+    padding: 10px 10px ;
+    
+    text-decoration: none ;
+    border-radius: 5px ;
+    
+    margin-top : 20px ;
+    padding-left : 5px ;
+
+}
+
+.miniButton:active {
+    transform: scale(0.8) ;
+    background-color: greenyellow ;
+}
+
+.miniButton:focus {
+    background-color: greenyellow ;
+}

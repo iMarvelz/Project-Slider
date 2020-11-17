@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Slider</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="sliderwrapper">
+            <div class ="slider">
+                <img src="https://i.picsum.photos/id/0/5616/3744.jpg?hmac=3GAAioiQziMGEtLbfrdbcoenXoWAW-zlyEAMkfEdBzQ"  id="image" alt=""/>
+            </div>
+        </div>
+        <div class="buttonwrapper">
+            <a class="buttonPrev" href="#" id="buttonPrev">Prev</a>
+            <a class="buttonNext" href="#" id="buttonNext">Next</a>
+        </div>
+            <div class="miniButtonWrapper">
+                <a class="miniButton" href="#" id="miniButton0"></a>
+                <a class="miniButton" href="#" id="miniButton1"></a>
+                <a class="miniButton" href="#" id="miniButton2"></a>
+                <a class="miniButton" href="#" id="miniButton3"></a>
+                <a class="miniButton" href="#" id="miniButton4"></a>
+            </div>
+        <script>
+            const urls = [
+                "https://i.picsum.photos/id/0/5616/3744.jpg?hmac=3GAAioiQziMGEtLbfrdbcoenXoWAW-zlyEAMkfEdBzQ",
+                'https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68',
+                'https://i.picsum.photos/id/1000/5626/3635.jpg?hmac=qWh065Fr_M8Oa3sNsdDL8ngWXv2Jb-EE49ZIn6c0P-g',
+                "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo",
+                "https://i.picsum.photos/id/1003/1181/1772.jpg?hmac=oN9fHMXiqe9Zq2RM6XT-RVZkojgPnECWwyEF1RvvTZk",
+            ];
+            let currentIndex = 0;
+
+            const image = window.document.getElementById('image');
+            const buttonNext = window.document.getElementById('buttonNext');
+            function onClick() {
+                currentIndex++;
+                const newImageUrl = urls[currentIndex];
+                image.setAttribute('src', newImageUrl);
+            }
+            buttonNext.addEventListener(
+                'click',
+                onClick,
+                false,
+            );
+
+            const buttonPrev = window.document.getElementById('buttonPrev');
+            function onClickPrev() {
+                currentIndex--;       
+                const newImageUrl = urls[currentIndex];
+                image.setAttribute('src', newImageUrl);
+            }
+            buttonPrev.addEventListener(
+                'click',
+                onClickPrev,
+                false,
+            );
+            const miniButton0 = window.document.getElementById('miniButton0'); /*0*/
+            function onClickMini0() {
+                currentIndex=0;       
+                const newImageUrl = urls[currentIndex];
+                image.setAttribute('src', newImageUrl);
+            }
+            miniButton0.addEventListener(
+                'click',
+                onClickMini0,
+                false,
+            );
+
+            const miniButton1 = window.document.getElementById('miniButton1'); /*1*/
+            function onClickMini1() {
+                currentIndex=1;       
+                const newImageUrl = urls[currentIndex];
+                image.setAttribute('src', newImageUrl);
+            }
+            miniButton1.addEventListener(
+                'click',
+                onClickMini1,
+                false,
+            );
+
+            const miniButton2 = window.document.getElementById('miniButton2'); /*2*/
+            function onClickMini2() {
+                currentIndex=2;       
+                const newImageUrl = urls[currentIndex];
+                image.setAttribute('src', newImageUrl);
+            }
+            miniButton2.addEventListener(
+                'click',
+                onClickMini2,
+                false,
+            );
+
+            const miniButton3 = window.document.getElementById('miniButton3'); /*3*/
+            function onClickMini3() {
+                currentIndex=3;       
+                const newImageUrl = urls[currentIndex];
+                image.setAttribute('src', newImageUrl);
+            }
+            miniButton3.addEventListener(
+                'click',
+                onClickMini3,
+                false,
+            );
+
+            const miniButton4 = window.document.getElementById('miniButton4'); /*4*/
+            function onClickMini4() {
+                currentIndex=4;       
+                const newImageUrl = urls[currentIndex];
+                image.setAttribute('src', newImageUrl);
+            }
+            miniButton4.addEventListener(
+                'click',
+                onClickMini4,
+                false,
+            );
+
+
+        </script>
+    </body>
+</html>
